@@ -1,0 +1,120 @@
+/* Theme Name: Buckzo - Minimal Tailwind CSS 3 Template
+   Author: Myrathemes
+   Author e-mail: Myrathemes@gmail.com
+   Version: 1.0.0
+   Created: March 2020
+   File Description: Main css file of the template
+*/
+
+
+/**** Font Link *****/
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*******************
+    General
+*******************/
+@layer base {
+    
+    html {
+        @apply scroll-smooth;
+    }
+
+    body {
+        @apply text-[15px] text-[#505458] font-body font-normal;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-medium;
+    }
+
+    ::-moz-selection {
+        @apply bg-gray-700 text-white;
+    }
+
+    ::selection {
+        @apply bg-gray-700 text-white;
+    }
+
+    a {
+        @apply transition-all ease-in-out duration-300;
+    }
+
+    /*******************
+        Helper
+    *******************/
+    p {
+        @apply leading-7;
+    }
+    h1 {
+        @apply text-[36px];
+    }
+
+    h2 {
+        @apply text-[30px];
+    }
+
+    h3 {
+        @apply text-[24px];
+    }
+
+    h4 {
+        @apply text-[17px];
+    }
+
+    section {
+        @apply relative;
+    }
+
+    .shape {
+        @apply absolute pointer-events-none right-0 left-0 -bottom-0.5;
+    }
+
+    .shape > svg {
+        @apply scale-[2] w-full h-auto origin-top;
+    }
+
+    input,
+    textarea,
+    button,
+    select,
+    a {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+}
+
+/******************
+    navbar 
+*******************/
+.navbar-show {
+    height: 15.75rem !important;
+    opacity: 1 !important;
+}
+
+/******************
+    filter section
+*******************/
+
+.filter-options li a {
+    @apply inline-block text-[13px] uppercase py-[7px] px-3 cursor-pointer transition-all duration-300 text-gray-700 rounded font-medium;
+}
+
+.filter-options li:hover a,
+.filter-options li.active a,
+.filter-options li:active a,
+.filter-options li:focus a {
+    @apply bg-blue-500/25 text-blue-500;
+}
+
+.filter-box {
+    display: none;
+}
